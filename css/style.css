@@ -809,17 +809,17 @@ body.dark {
     --shadow-small: 4px 4px 0 #8a8a8a;
 }
 body.dark.hombre {
-    --background: #071322;
-    --foreground: #eef5ff;
-    --card: #0d2038;
-    --muted: #19314f;
-    --muted-foreground: #b5d2f5;
-    --accent: #214d83;
+    --background: #040d1b;
+    --foreground: #edf6ff;
+    --card: #0a1a31;
+    --muted: #132b4a;
+    --muted-foreground: #b9d4f1;
+    --accent: #17477f;
     --destructive: #ff9b91;
-    --border: #b9d8ff;
-    --primary: #63a8ff;
-    --primary-foreground: #08182d;
-    --sprout: #75dfad;
+    --border: #9fcaff;
+    --primary: #3b94f7;
+    --primary-foreground: #031225;
+    --sprout: #69dfaf;
     --card-shadow: #8a8a8a;
     --shadow-color: #8a8a8a;
     --shadow-hard: 7px 7px 0 #8a8a8a;
@@ -969,6 +969,10 @@ body.dark .header h1 {
 
 body.dark {
   background-image: radial-gradient(rgba(255, 255, 255, 0.16) 0.7px, transparent 0.7px);
+}
+
+body.dark.hombre {
+  background-image: radial-gradient(rgba(132, 190, 255, 0.2) 0.7px, transparent 0.7px);
 }
 
 button:focus-visible,
