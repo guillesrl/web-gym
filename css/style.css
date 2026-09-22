@@ -810,15 +810,15 @@ body.dark {
 }
 body.dark.hombre {
     --background: #040d1b;
-    --foreground: #edf6ff;
-    --card: #0a1a31;
-    --muted: #132b4a;
-    --muted-foreground: #b9d4f1;
-    --accent: #17477f;
+    --foreground: #f4f7fb;
+    --card: #0b192b;
+    --muted: #17283b;
+    --muted-foreground: #b7c1cc;
+    --accent: #16385f;
     --destructive: #ff9b91;
-    --border: #9fcaff;
-    --primary: #3b94f7;
-    --primary-foreground: #031225;
+    --border: #6f88a4;
+    --primary: #245284;
+    --primary-foreground: #fff;
     --sprout: #69dfaf;
     --card-shadow: #8a8a8a;
     --shadow-color: #8a8a8a;
@@ -923,12 +923,12 @@ body.dark .btn-export {
 }
 
 body.dark .action-card:first-child .action-desc {
-  color: var(--background);
-  opacity: 1;
+  color: var(--primary-foreground);
+  opacity: .78;
 }
 
 body.dark .action-card:first-child .action-link {
-  color: var(--accent);
+  color: var(--primary-foreground);
 }
 
 body.dark .action-icon {
@@ -936,9 +936,9 @@ body.dark .action-icon {
 }
 
 body.dark .action-card:first-child .action-icon {
-  background: var(--accent);
-  color: var(--background);
-  border-color: var(--accent);
+  background: var(--primary-foreground);
+  color: var(--primary);
+  border-color: var(--primary-foreground);
 }
 
 body.dark .date-cell.today {
@@ -972,7 +972,7 @@ body.dark {
 }
 
 body.dark.hombre {
-  background-image: radial-gradient(rgba(132, 190, 255, 0.2) 0.7px, transparent 0.7px);
+  background-image: radial-gradient(rgba(117, 145, 176, 0.18) 0.7px, transparent 0.7px);
 }
 
 button:focus-visible,
