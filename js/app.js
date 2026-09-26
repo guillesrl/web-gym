@@ -172,20 +172,23 @@ function setRepKey(field, name, week) {
 function renderDetailInputs(name, detail) {
     const parsed = parseDetail(detail);
     const week = currentWeek;
-    const savedSeries = localStorage.getItem(setRepKey('series', name, week)) || '';
-    const savedReps = localStorage.getItem(setRepKey('reps', name, week)) || '';
+    const isBlankWomenRoutine = currentTab === 'tonificar' && parsed.series === '0' && parsed.reps === '0';
+    const savedSeries = localStorage.getItem(setRepKey('series', name, week));
+    const savedReps = localStorage.getItem(setRepKey('reps', name, week));
+    const seriesValue = savedSeries === null ? (isBlankWomenRoutine ? '0' : '') : savedSeries;
+    const repsValue = savedReps === null ? (isBlankWomenRoutine ? '0' : '') : savedReps;
     const safeName = escapeHtml(name);
     const suffix = parsed.suffix ? `<span class="suffix">${escapeHtml(parsed.suffix)}</span>` : '';
     const repsPh = parsed.reps + (parsed.suffix ? parsed.suffix.replace(/\s+/g, '') : '');
     return `<span class="exercise-detail">
-        <input type="number" min="1" max="20" inputmode="numeric"
+        <input type="number" min="0" max="20" inputmode="numeric"
             data-exercise="${safeName}" data-week="${week}" data-field="series"
-            placeholder="${escapeHtml(parsed.series)}" value="${escapeHtml(savedSeries)}"
+            placeholder="${escapeHtml(parsed.series)}" value="${escapeHtml(seriesValue)}"
             title="Series" onchange="handleSetRepChange(this)">
         <span class="sep">x</span>
-        <input type="number" min="1" max="200" inputmode="numeric"
+        <input type="number" min="0" max="200" inputmode="numeric"
             data-exercise="${safeName}" data-week="${week}" data-field="reps"
-            placeholder="${escapeHtml(repsPh)}" value="${escapeHtml(savedReps)}"
+            placeholder="${escapeHtml(repsPh)}" value="${escapeHtml(repsValue)}"
             title="Repeticiones" onchange="handleSetRepChange(this)">
         ${suffix}
     </span>`;
@@ -769,7 +772,7 @@ function saveCustomization() { localStorage.setItem(CUSTOM_ROUTINES_KEY, JSON.st
 function getExerciseMeta(name) { return exerciseMeta[name] || {}; }
 async function loadRoutines() {
     try {
-        const res = await fetch('./data/routines.json?v=51', { cache: 'no-store' });
+        const res = await fetch('./data/routines.json?v=52', { cache: 'no-store' });
         baseRoutines = await res.json();
         customRoutines = readLocalJson(CUSTOM_ROUTINES_KEY, {});
         exerciseMeta = readLocalJson(EXERCISE_META_KEY, {});
@@ -794,7 +797,10 @@ async function loadRoutines() {
 loadRoutines();
 
 function getRoutines() {
-    return routines[currentTab]?.[currentWeek] || routines[currentTab]?.['1'] || routines[currentTab]?.[1] || { 'Día 1': [] };
+    const currentRoutine = routines[currentTab]?.[currentWeek];
+    return currentRoutine && Object.keys(currentRoutine).length
+        ? currentRoutine
+        : (routines[currentTab]?.['1'] || routines[currentTab]?.[1] || { 'Día 1': [] });
 }
 
 // --- Modal helpers ---
@@ -841,7 +847,7 @@ document.getElementById('btn-routine').addEventListener('click', () => {
                         <div class="exercise-weight">
                             <input type="number" min="0" step="0.5" placeholder="0" title="Peso en kg"
                                 data-exercise="${escapeHtml(ex.name)}"
-                                value="${localStorage.getItem('peso:' + ex.name) || ''}"
+                                value="${localStorage.getItem('peso:' + ex.name) ?? (currentTab === 'tonificar' ? '0' : '')}"
                                 onchange="handleWeightChange(this)">
                             <span>kg</span>
                             <span class="pr-badge"${getPR(ex.name) === null ? ' style="display:none"' : ''}>${getPR(ex.name) !== null ? 'PR: ' + getPR(ex.name) + 'kg' : ''}</span>
@@ -893,7 +899,7 @@ document.getElementById('routine-body').addEventListener('click', (e) => {
         const registeredExercises = [...regBtn.closest('.routine-day').querySelectorAll('.exercise-item')].map(row => {
             const series = row.querySelector('[data-field="series"]')?.value.trim() || '';
             const reps = row.querySelector('[data-field="reps"]')?.value.trim() || '';
-            return { name: row.querySelector('.exercise-name').textContent, detail: row.querySelector('.exercise-detail')?.textContent.trim() || '', completed: Boolean(series && reps) };
+            return { name: row.querySelector('.exercise-name').textContent, detail: row.querySelector('.exercise-detail')?.textContent.trim() || '', completed: Number(series) > 0 && Number(reps) > 0 };
         });
         registeredExercises.forEach((exercise, index) => {
             exercise.detail = getRoutines()[day]?.[index]?.detail || exercise.detail;

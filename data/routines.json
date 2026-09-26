@@ -1,11 +1,10 @@
 {
   "labels": {
     "tonificar": {
-      "Día 1": "Glúteos y Piernas 🦵",
-      "Día 2": "Espalda y Hombros 💪",
-      "Día 3": "Piernas y Glúteos 🍑",
-      "Día 4": "Hombros y Brazos 🔥",
-      "Día 5": "Glúteos y Piernas 🦵"
+      "Día 1": "Glúteos y femoral 🍑",
+      "Día 2": "Tren superior 💪",
+      "Día 3": "Cuádriceps y glúteos 🦵",
+      "Día 4": "Glúteos y pierna completa 🍑"
     },
     "hombre": {
       "Día 1": "Pecho y Bíceps 💪",
@@ -16,160 +15,40 @@
   "tonificar": {
     "1": {
       "Día 1": [
-        { "name": "Hip Thrust",          "detail": "3x12" },
-        { "name": "Zancadas",            "detail": "3x12 c/pierna" },
-        { "name": "Prensa de piernas",   "detail": "3x12" },
-        { "name": "Abducciones",         "detail": "3x15" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
+        { "name": "Hip Thrust", "detail": "0x0" },
+        { "name": "Peso muerto rumano", "detail": "0x0" },
+        { "name": "Estocadas", "detail": "0x0" },
+        { "name": "Curl femoral", "detail": "0x0" },
+        { "name": "Abducciones", "detail": "0x0" },
+        { "name": "Aducciones", "detail": "0x0" }
       ],
       "Día 2": [
-        { "name": "Jalón al pecho",      "detail": "3x12" },
-        { "name": "Remo",                "detail": "3x12" },
-        { "name": "Face pull",           "detail": "3x15" },
-        { "name": "Pullover en polea",   "detail": "3x12" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
+        { "name": "Jalón al pecho", "detail": "0x0" },
+        { "name": "Remo", "detail": "0x0" },
+        { "name": "Press de hombros", "detail": "0x0" },
+        { "name": "Elevaciones laterales", "detail": "0x0" },
+        { "name": "Bíceps", "detail": "0x0" },
+        { "name": "Tríceps", "detail": "0x0" }
       ],
       "Día 3": [
-        { "name": "Sentadilla",          "detail": "3x10" },
-        { "name": "Peso muerto",         "detail": "3x10" },
-        { "name": "Patada de glúteo",    "detail": "3x15 c/lado" },
-        { "name": "Isquios en máquina",  "detail": "3x12" },
-        { "name": "Cuádriceps en máquina","detail": "3x15" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
+        { "name": "Sentadilla", "detail": "0x0" },
+        { "name": "Hip Thrust", "detail": "0x0" },
+        { "name": "Estocadas", "detail": "0x0" },
+        { "name": "Extensión de cuádriceps", "detail": "0x0" },
+        { "name": "Aducciones", "detail": "0x0" }
       ],
       "Día 4": [
-        { "name": "Press de hombro",     "detail": "3x12" },
-        { "name": "Vuelos frontales",    "detail": "3x12" },
-        { "name": "Vuelos laterales",    "detail": "3x12" },
-        { "name": "Bíceps en polea",     "detail": "3x12" },
-        { "name": "Tríceps en polea",    "detail": "3x12" },
-        { "name": "Cardio",             "detail": "10 min" }
-      ],
-      "Día 5": [
-        { "name": "Hip Thrust",          "detail": "3x12" },
-        { "name": "Zancadas",            "detail": "3x12 c/pierna" },
-        { "name": "Prensa de piernas",   "detail": "3x12" },
-        { "name": "Abducciones",         "detail": "3x15" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
+        { "name": "Hip Thrust", "detail": "0x0" },
+        { "name": "Peso muerto rumano", "detail": "0x0" },
+        { "name": "Sentadilla", "detail": "0x0" },
+        { "name": "Estocadas", "detail": "0x0" },
+        { "name": "Curl femoral", "detail": "0x0" },
+        { "name": "Abducciones", "detail": "0x0" }
       ]
     },
-    "2": {
-      "Día 1": [
-        { "name": "Hip Thrust",          "detail": "3x15" },
-        { "name": "Zancadas",            "detail": "3x15 c/pierna" },
-        { "name": "Prensa de piernas",   "detail": "3x15" },
-        { "name": "Abducciones",         "detail": "3x20" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
-      ],
-      "Día 2": [
-        { "name": "Jalón al pecho",      "detail": "3x15" },
-        { "name": "Remo",                "detail": "3x15" },
-        { "name": "Face pull",           "detail": "3x20" },
-        { "name": "Pullover en polea",   "detail": "3x15" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
-      ],
-      "Día 3": [
-        { "name": "Sentadilla",          "detail": "3x12" },
-        { "name": "Peso muerto",         "detail": "3x12" },
-        { "name": "Patada de glúteo",    "detail": "3x20 c/lado" },
-        { "name": "Isquios en máquina",  "detail": "3x15" },
-        { "name": "Cuádriceps en máquina","detail": "3x20" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
-      ],
-      "Día 4": [
-        { "name": "Press de hombro",     "detail": "3x15" },
-        { "name": "Vuelos frontales",    "detail": "3x15" },
-        { "name": "Vuelos laterales",    "detail": "3x15" },
-        { "name": "Bíceps en polea",     "detail": "3x15" },
-        { "name": "Tríceps en polea",    "detail": "3x15" },
-        { "name": "Cardio",             "detail": "10 min" }
-      ],
-      "Día 5": [
-        { "name": "Hip Thrust",          "detail": "3x15" },
-        { "name": "Zancadas",            "detail": "3x15 c/pierna" },
-        { "name": "Prensa de piernas",   "detail": "3x15" },
-        { "name": "Abducciones",         "detail": "3x20" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
-      ]
-    },
-    "3": {
-      "Día 1": [
-        { "name": "Hip Thrust",          "detail": "3x12" },
-        { "name": "Zancadas",            "detail": "3x12 c/pierna" },
-        { "name": "Prensa de piernas",   "detail": "3x12" },
-        { "name": "Abducciones",         "detail": "3x15" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
-      ],
-      "Día 2": [
-        { "name": "Jalón al pecho",      "detail": "3x12" },
-        { "name": "Remo",                "detail": "3x12" },
-        { "name": "Face pull",           "detail": "3x15" },
-        { "name": "Pullover en polea",   "detail": "3x12" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
-      ],
-      "Día 3": [
-        { "name": "Sentadilla",          "detail": "3x10" },
-        { "name": "Peso muerto",         "detail": "3x10" },
-        { "name": "Patada de glúteo",    "detail": "3x15 c/lado" },
-        { "name": "Isquios en máquina",  "detail": "3x12" },
-        { "name": "Cuádriceps en máquina","detail": "3x15" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
-      ],
-      "Día 4": [
-        { "name": "Press de hombro",     "detail": "3x12" },
-        { "name": "Vuelos frontales",    "detail": "3x12" },
-        { "name": "Vuelos laterales",    "detail": "3x12" },
-        { "name": "Bíceps en polea",     "detail": "3x12" },
-        { "name": "Tríceps en polea",    "detail": "3x12" },
-        { "name": "Cardio",             "detail": "10 min" }
-      ],
-      "Día 5": [
-        { "name": "Hip Thrust",          "detail": "3x12" },
-        { "name": "Zancadas",            "detail": "3x12 c/pierna" },
-        { "name": "Prensa de piernas",   "detail": "3x12" },
-        { "name": "Abducciones",         "detail": "3x15" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
-      ]
-    },
-    "4": {
-      "Día 1": [
-        { "name": "Hip Thrust",          "detail": "3x15" },
-        { "name": "Zancadas",            "detail": "3x15 c/pierna" },
-        { "name": "Prensa de piernas",   "detail": "3x15" },
-        { "name": "Abducciones",         "detail": "3x20" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
-      ],
-      "Día 2": [
-        { "name": "Jalón al pecho",      "detail": "3x15" },
-        { "name": "Remo",                "detail": "3x15" },
-        { "name": "Face pull",           "detail": "3x20" },
-        { "name": "Pullover en polea",   "detail": "3x15" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
-      ],
-      "Día 3": [
-        { "name": "Sentadilla",          "detail": "3x12" },
-        { "name": "Peso muerto",         "detail": "3x12" },
-        { "name": "Patada de glúteo",    "detail": "3x20 c/lado" },
-        { "name": "Isquios en máquina",  "detail": "3x15" },
-        { "name": "Cuádriceps en máquina","detail": "3x20" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
-      ],
-      "Día 4": [
-        { "name": "Press de hombro",     "detail": "3x15" },
-        { "name": "Vuelos frontales",    "detail": "3x15" },
-        { "name": "Vuelos laterales",    "detail": "3x15" },
-        { "name": "Bíceps en polea",     "detail": "3x15" },
-        { "name": "Tríceps en polea",    "detail": "3x15" },
-        { "name": "Cardio",             "detail": "10 min" }
-      ],
-      "Día 5": [
-        { "name": "Hip Thrust",          "detail": "3x15" },
-        { "name": "Zancadas",            "detail": "3x15 c/pierna" },
-        { "name": "Prensa de piernas",   "detail": "3x15" },
-        { "name": "Abducciones",         "detail": "3x20" },
-        { "name": "Plancha",             "detail": "3x60 seg" }
-      ]
-    }
+    "2": {},
+    "3": {},
+    "4": {}
   },
   "hombre": {
     "1": {

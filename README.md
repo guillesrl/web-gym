@@ -8,11 +8,11 @@ App web brutalista para registrar rutinas de gimnasio, hacer seguimiento de prog
 
 ## Características
 
-- **Dos programas con switch Mujer / Hombre** — la rutina Mujer (5 días, Lun–Vie) o la Hombre (3 días, Lun/Mié/Vie); la selección se guarda y persiste
+- **Dos programas con switch Mujer / Hombre** — la rutina Mujer (4 días, Lun–Jue) o la Hombre (3 días, Lun/Mié/Vie); la selección se guarda y persiste
 - **Paleta por género** — Mujer usa la paleta rosa/negro original; Hombre cambia a azul sobre blanco (claro) y verde sobre negro (oscuro), vía clase `body.hombre` en CSS
 - **Encabezados con día + grupo muscular** — cada día muestra el día de la semana y el grupo trabajado (ej. `Lunes · Glúteos y Piernas 🦵`)
 - **Selector de fecha con calendario** — tira de días navegable por mes (reemplaza al antiguo selector "Semana N"); arranca en hoy y permite registrar entrenos en cualquier fecha pasada, el futuro queda bloqueado
-- **Progresión en 4 semanas** — series y repeticiones suben progresivamente; la semana del programa (1-4) se deduce internamente de la fecha seleccionada, aunque en pantalla ya no se numera
+- **Valores personalizables** — la rutina Mujer comienza con peso, series y repeticiones a `0` para que cada cliente los complete; la semana del programa (1-4) se deduce internamente de la fecha seleccionada, aunque en pantalla ya no se numera
 - **Series y reps editables** — cada ejercicio tiene inputs `series x reps` con el valor sugerido como placeholder; tu personalización se guarda por ejercicio + semana
 - **Ayudas visuales con fallback** — GIFs de ExerciseDB y fuentes externas verificadas; si fallan, se muestra una imagen de respaldo del mismo movimiento
 - **Editor de rutinas y ejercicios** — añade, quita, reordena o sustituye ejercicios y personaliza nombre, instrucciones, músculos e imagen; los cambios se guardan offline y no alteran entrenos ya registrados
@@ -64,15 +64,14 @@ gym/
 
 ## Rutinas
 
-Ambos programas siguen una progresión de 4 semanas: series y repeticiones suben progresivamente y la semana se deduce automáticamente desde la fecha de inicio del programa.
+La semana del programa (1-4) se deduce automáticamente desde la fecha de inicio. La rutina Mujer se mantiene idéntica en cada semana y parte de valores a `0` para que el cliente los personalice.
 
-### Mujer — 5 días (Lun–Vie)
+### Mujer — 4 días (Lun–Jue)
 
-- **Lunes · Glúteos y Piernas 🦵** — Hip Thrust, Zancadas, Prensa de piernas, Abducciones, Plancha
-- **Martes · Espalda y Hombros 💪** — Jalón al pecho, Remo, Face pull, Pullover en polea, Plancha
-- **Miércoles · Piernas y Glúteos 🍑** — Sentadilla, Peso muerto, Patada de glúteo, Isquios en máquina, Cuádriceps en máquina, Plancha
-- **Jueves · Hombros y Brazos 🔥** — Press de hombro, Vuelos frontales, Vuelos laterales, Bíceps en polea, Tríceps en polea, Cardio
-- **Viernes · Glúteos y Piernas 🦵** — Hip Thrust, Zancadas, Prensa de piernas, Abducciones, Plancha
+- **Lunes · Glúteos y femoral 🍑** — Hip Thrust, Peso muerto rumano, Estocadas, Curl femoral, Abducciones, Aducciones
+- **Martes · Tren superior 💪** — Jalón al pecho, Remo, Press de hombros, Elevaciones laterales, Bíceps, Tríceps
+- **Miércoles · Cuádriceps y glúteos 🦵** — Sentadilla, Hip Thrust, Estocadas, Extensión de cuádriceps, Aducciones
+- **Jueves · Glúteos y pierna completa 🍑** — Hip Thrust, Peso muerto rumano, Sentadilla, Estocadas, Curl femoral, Abducciones
 
 ### Hombre — 3 días (Lun/Mié/Vie)
 
@@ -117,7 +116,7 @@ Todo se guarda en `localStorage`:
 | `peso:<Ejercicio>` | Peso actual en kg |
 | `peso-history:<Ejercicio>` | Histórico de pesos (alimenta el semáforo de progreso) |
 | `pr:<Ejercicio>` / `pr-date:<Ejercicio>` | Récord personal + fecha |
-| `series:w<N>:<Ejercicio>` / `reps:w<N>:<Ejercicio>` | Personalización por semana |
+| `series:w<N>:<Ejercicio>` / `reps:w<N>:<Ejercicio>` | Personalización por semana (la rutina Mujer parte de `0`) |
 | `program-start-date` | Fecha de inicio (para calcular la semana 1-4 del programa) |
 | `rutina-genero` | Programa activo (`tonificar` = Mujer / `hombre`) |
 | `dark-mode` | Preferencia de tema |
